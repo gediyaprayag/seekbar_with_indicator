@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seekbar with Bubble Indicator"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:textSize="24sp"/>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Discrete Seekbar"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp"/>
+
+        <mockingbird.project.com.popup_seekbar.Indicator
+            android:id="@+id/tvIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/indicator"
+            android:gravity="center_horizontal"/>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            style="@style/SeekBarWithoutSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:max="10"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:thumb="@drawable/thumb"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll1"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Default Seekbar"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp"/>
+
+        <mockingbird.project.com.popup_seekbar.Indicator
+            android:id="@+id/tvIndicator1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/indicator"
+            android:gravity="center_horizontal"/>
+
+        <SeekBar
+            android:id="@+id/seekBar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:max="100"
+            android:progress="50"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:thumb="@drawable/thumb"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
